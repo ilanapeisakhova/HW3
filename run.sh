@@ -33,11 +33,11 @@ case "$1" in
         ;;
     inside_generator)
         echo "Запуск контейнера генератора и вывод её содержимого data изнутри контейнера."
-        docker run -v "$(pwd)/data:/data" generator /bin/sh -c "ls -la /data"
+        docker run --rm -v "$(pwd)/data:/data" -it generator /bin/sh -c "ls -la /data"
         ;;
     inside_reporter)
         echo "Запуск контейнера аналитика и вывод её содержимого data изнутри контейнера."
-        docker run -v "$(pwd)/data:/data" reporter /bin/sh -c "ls -la /data"
+        docker run --rm -v "$(pwd)/data:/data" -it reporter /bin/sh -c "ls -la /data"
         ;;
     create_local_data)
         echo "Создание data.csv в директории local_data (для локальной отладки)"
