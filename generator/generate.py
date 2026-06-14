@@ -3,10 +3,10 @@ import random
 import os
 import sys
 
-NUM_ROWS = 50
+NUM_ROWS = 100
 
 
-COLUMNS = ["COLUMN_1", "COLUMN_2", "COLUMN_3", "COLUMN_4"]
+COLUMNS = ["employee_id", "customer_feedback", "company_rank", "department"]
 
 def generate_row():
 
